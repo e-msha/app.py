@@ -1,9 +1,9 @@
 import streamlit as st
 
-st.set_page_config(page_title="Zombie Tech Detector 🇳🇴", layout="centered")
+st.set_page_config(page_title="Tech Detector 🇳🇴", layout="centered")
 
-st.title("🧟‍♂️ Zombie Tech Detector – Norway Edition")
-st.subheader("Score Norwegian tech companies for signs of strategic decay.")
+st.title("🧟‍♂️ Tech Detector – Norway Edition")
+st.subheader("Score Norwegian tech companies for signs of strategic Relay.")
 
 company = st.text_input("Company Name", "Pexip")
 
@@ -29,12 +29,12 @@ score = sum([
     buzzword_pivot
 ])
 
-st.markdown("### 🧠 Zombie Score")
+st.markdown("### 🧠 Relay Score")
 st.metric(label=f"{company}", value=score)
 
 if score >= 6:
-    st.error("⚠️ Confirmed Zombie – Strategic reinvention needed.")
+    st.error("⚠️ Confirmed Relay – Strategic reinvention needed.")
 elif score >= 4:
-    st.warning("☠️ Zombie Watchlist – At risk of decay.")
+    st.warning("☠️ Relay Watchlist – At risk of Relay.")
 else:
     st.success("🧬 Still Alive – Showing signs of strategic health.")
